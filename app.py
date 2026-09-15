@@ -182,15 +182,24 @@ quiz_data = {
 }
 
 
-name = st.text_input("Enter your name")
+name = st.text_input(
+    "Your name",
+    placeholder="Enter your name"
+)
+
+if not name.strip():
+    st.info("Please enter your name to continue.")
+    st.stop()
+
+st.subheader("Start Learning")
 
 topic = st.selectbox(
-    "Select a topic",
+    "Choose a topic",
     list(explanations.keys())
 )
 
 action = st.radio(
-    "Select an option",
+    "What would you like to do?",
     [
         "Explain a topic",
         "Make a summary",
