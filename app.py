@@ -9,7 +9,8 @@ st.set_page_config(
 
 
 st.title("AI Study Assistant")
-st.write("A simple study assistant for learning and practice.")
+st.subheader("Your personal study companion")
+st.write("Learn, revise, and practice different topics in one place.")
 
 
 explanations = {
