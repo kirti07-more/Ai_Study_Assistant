@@ -241,6 +241,7 @@ else:
         answer = st.radio(
             question["question"],
             question["options"],
+            index=None,
             key=f"{topic}_{index}"
         )
 
